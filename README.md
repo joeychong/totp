@@ -1,3 +1,3 @@
-# TOPT Library
+# TOTP Library
 
 TODO
