@@ -26,7 +26,7 @@ export const DEFAULT:TotpParameter = {
   alg: 'sha1',
   keyType: 'base32',
   period: 30,
-  bits: 80,
+  bits: 160,
   digits: 6
 } as const;
 

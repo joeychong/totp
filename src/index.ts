@@ -17,7 +17,9 @@ function getKeyType(secret: string) : KeyType {
   return keyType;
 }
 
-export function createTotp(options: Partial<TotpParameter>, useSubtle = false) : Promise<TotpResult> {
+type CreateOptions = Omit<TotpParameter, 'keyType'>
+
+export function createTotp(options: Partial<CreateOptions>, useSubtle = false) : Promise<TotpResult> {
   if (isBrowser() || useSubtle) {
     return webCreate(options);
   } else {
@@ -82,4 +84,6 @@ export function verifyTotp(secret: string, otp: string, windows: 1|2|3 = 1, opti
   const otp2 = await generateTotp(result.base32, {}, true);
   console.log(otp2);
   console.log(await verifyTotp(result.base32, otp2));
+  const result3 = await createTotp();
+  console.log(result3);
 })();*/
