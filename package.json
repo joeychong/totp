@@ -1,5 +1,5 @@
 {
-  "name": "@ebizone/totp",
+  "name": "@ebizzone/totp",
   "version": "1.0.0",
   "description": "A modern and minimal TOTP (Time-based One-Time Password) library for Node.js, browsers, and edge environments.",
   "keywords": ["totp", "password"],
